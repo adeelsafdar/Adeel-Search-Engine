@@ -1,11 +1,26 @@
 <?php 
 
-namespace adeel\HelloWorld;
+namespace adeel\searchengine;
 
-class Index
+class SearchEngine
 {
-    public function greet($greet = "Hello World")
+
+    public $searchengine = '';
+
+    public function setEngine($searchengine = "google.com")
     {
-        return $greet;
+        $this->searchengine = $searchengine;
+    }
+
+    public function search($keywords = array('best game'))
+    {
+         require_once "vendor/autoload.php";
+         $httpClient = new \GuzzleHttp\Client();
+        $response = $httpClient->get('https://www.google.com/search?q=best+hosting');
+        $htmlString = (string) $response->getBody();
+
+        echo "<pre>";
+        print_r($htmlString);
+        echo "</pre>";
     }
 }

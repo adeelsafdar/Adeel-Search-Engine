@@ -1,6 +1,6 @@
 {
-    "name": "adeel/hello-composer",
-    "description": "A simple hello world composer package",
+    "name": "adeel/searchengine",
+    "description": "A simple search engine",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,10 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
-        "psr-4": {"adeel\\HelloWorld\\": "src/"}
+        "psr-4": {"adeel\\searchengine\\": "src/"}
     },
-    "require": {}
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "^7.4"
+    }
 }
