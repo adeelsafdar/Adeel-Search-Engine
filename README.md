@@ -5,7 +5,7 @@ Installation:
 1) Open cmd as Administrator
 2) Goto to root directory
 3) Create an empty file called "composer.json"
-4) Run "composer require adeel/hello-composer:dev-main" command
+4) Run "composer require adeel/searchenginer:dev-main" command
 
 Usage:
 
